@@ -12,15 +12,20 @@
   in {
     packages = forEachSupportedSystem ({pkgs}: {
       default = pkgs.writeShellScriptBin "nixdev" ''
-        echo "hello"
-        # if [ -z "$1" ]; then
-        #   echo "missing dev template argument, you can choose from: clojure csharp cue dhall elixir elm gleam go hashi haskell haxe java kotlin latex nickel nim nix node ocaml opa php protobuf pulumi purescript python ruby rust-toolchain rust scala shell zig"
-        #   nix flake new -t github:nix-community/nix-direnv .
-        # else
-        #   nix flake init --template github:the-nix-way/dev-templates#$1
-        # fi
-        # direnv allow .
-        # cat .gitignore | grep ".direnv" || echo ".direnv" >> .gitignore
+        if [ -z "$1" ]; then
+          echo "Missing dev template argument
+          Usage: 
+            nixdev <template>
+          you can choose a template from: 
+            empty 
+            node
+            rust
+            r"
+        else
+          nix flake init --template github:AmadeusWM/dev-templates-nix#$1
+          direnv allow .
+          cat .gitignore | grep ".direnv" || echo ".direnv" >> .gitignore # add .direnv to .gitignore if not already in .gitignore
+        fi
     '';
     });
     templates = {
