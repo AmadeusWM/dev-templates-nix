@@ -6,19 +6,19 @@
   outputs = {nixpkgs, ...}@inputs: {
     templates = {
       empty = {
-        path = "./empty";
+        path = ./empty;
         description = "Empty template for a development environment";
       };
       rust = {
-        path = "./rust";
+        path = ./rust;
         description = "Rust development environment";
       };
       r = {
-        path = "./r";
+        path = ./r;
         description = "R development environment";
       };
       node = {
-        path = "./node";
+        path = ./node;
         description = "Node development environment";
       };
     };
