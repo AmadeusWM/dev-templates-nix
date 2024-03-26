@@ -14,13 +14,13 @@
       default = pkgs.writeShellScriptBin "nixdev" ''
         if [ -z "$1" ]; then
           echo "Missing dev template argument
-          Usage: 
-            nixdev <template>
-          you can choose a template from: 
-            empty 
-            node
-            rust
-            r"
+        Usage: 
+          nixdev <template>
+        Choose a template from: 
+          empty 
+          node
+          rust
+          r"
         else
           nix flake init --template github:AmadeusWM/dev-templates-nix#$1
           direnv allow .
