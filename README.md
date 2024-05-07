@@ -16,4 +16,4 @@ Install the `nixdev` package to quickly download flakes from this repo.
 }
 ```
 # Usage
-run `nixdev rust` in your project
+for e.g. rust: run `nixdev rust` in your project to use the rust template.
