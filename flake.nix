@@ -30,6 +30,10 @@
     '';
     });
     templates = {
+      bevy = {
+        path = ./bevy ;
+        description = "Bevy development environment";
+      };
       empty = {
         path = ./empty;
         description = "Empty template for a development environment";
