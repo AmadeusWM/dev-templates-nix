@@ -15,3 +15,5 @@ Install the `nixdev` package to quickly download flakes from this repo.
   ];
 }
 ```
+# Usage
+run `nixdev rust` in your project
