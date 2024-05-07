@@ -17,6 +17,7 @@
         Usage: 
           nixdev <template>
         Choose a template from: 
+          bevy
           empty 
           node
           rust
