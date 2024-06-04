@@ -54,6 +54,10 @@
       latex = {
         path = ./latex;
         description = "Latex local environment";
+        welcomeText = ''
+          # Simple LaTeX setup
+          Simply run `watch.sh` in `src` to listen for updates in `main.tex` and generate a `main.pdf` file within the same directory.
+        '';
       };
     };
   };
