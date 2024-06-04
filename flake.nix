@@ -3,7 +3,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
-  outputs = {nixpkgs, ...}@inputs: 
+  outputs = {self, nixpkgs, ...}@inputs: 
   let
     supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
     forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f {
@@ -31,13 +31,14 @@
     });
     # TODO: set empty template to the default template
     templates = {
-      bevy = {
-        path = ./bevy ;
-        description = "Bevy development environment";
-      };
+      default = self.templates.empty;
       empty = {
         path = ./empty;
         description = "Empty template for a development environment";
+      };
+      bevy = {
+        path = ./bevy ;
+        description = "Bevy development environment";
       };
       rust = {
         path = ./rust;
