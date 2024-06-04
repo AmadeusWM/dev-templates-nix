@@ -17,6 +17,7 @@
         Usage: 
           nixdev <template>
         Choose a template from: 
+          bevy
           empty 
           node
           rust
@@ -29,6 +30,10 @@
     '';
     });
     templates = {
+      bevy = {
+        path = ./bevy ;
+        description = "Bevy development environment";
+      };
       empty = {
         path = ./empty;
         description = "Empty template for a development environment";

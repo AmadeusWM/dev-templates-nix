@@ -1,5 +1,5 @@
 {
-  description = "A Nix-flake-based Rust development environment";
+  description = "A Nix-flake-based Bevy development environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
