@@ -50,6 +50,10 @@
         path = ./node;
         description = "Node development environment";
       };
+      latex = {
+        path = ./latex;
+        description = "Latex local environment";
+      };
     };
   };
 }
