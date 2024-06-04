@@ -29,6 +29,7 @@
         fi
     '';
     });
+    # TODO: set empty template to the default template
     templates = {
       bevy = {
         path = ./bevy ;
