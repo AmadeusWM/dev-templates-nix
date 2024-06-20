@@ -1,6 +1,6 @@
 # dev-templates-nix
 Install the `nixdev` package to quickly download flakes from this repo.
-```
+```nix
 # In your flake.nix
 {
   inputs = {
