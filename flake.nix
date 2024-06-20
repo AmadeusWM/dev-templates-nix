@@ -18,6 +18,7 @@
           nixdev <template>
         Choose a template from: 
           bevy
+          cpp
           empty 
           node
           rust
@@ -39,6 +40,10 @@
       bevy = {
         path = ./bevy ;
         description = "Bevy development environment";
+      };
+      cpp = {
+        path = ./c-cpp ;
+        description = "C or CPP development environment";
       };
       rust = {
         path = ./rust;
