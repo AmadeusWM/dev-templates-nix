@@ -57,6 +57,10 @@
         path = ./node;
         description = "Node development environment";
       };
+      python = {
+        path = ./python;
+        description = "Python development environment";
+      };
       latex = {
         path = ./latex;
         description = "Latex local environment";
